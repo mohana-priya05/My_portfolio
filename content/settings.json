@@ -1,0 +1,27 @@
+{
+  "site": {
+    "title": "Mohana Priya — Full Stack Developer",
+    "description": "Full Stack Developer with 2+ years of experience building scalable enterprise and e-commerce web applications using React.js, Next.js, Node.js, Express.js, TypeScript, PostgreSQL, and AWS.",
+    "author": "Mohana Priya",
+    "keywords": [
+      "Mohana Priya",
+      "Full Stack Developer",
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "TypeScript",
+      "Portfolio"
+    ],
+    "twitterHandle": "",
+    "ogImage": "",
+    "themeColor": "#0f172a"
+  },
+  "resume": {
+    "fileName": "Mohana_Priya_Resume.pdf",
+    "path": "/resume/Mohana_Priya_Resume.pdf"
+  },
+  "admin": {
+    "dashboardHeading": "Content Dashboard",
+    "dashboardDescription": "Manage your portfolio content. Changes are committed to GitHub."
+  }
+}

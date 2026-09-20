@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: oklch(0.985 0.002 286.9);
+  --foreground: oklch(0.205 0.011 266.3);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.205 0.011 266.3);
+  --muted: oklch(0.945 0.005 283.4);
+  --muted-foreground: oklch(0.48 0.014 266.6);
+  --border: oklch(0.902 0.007 283.2);
+  --primary: oklch(0.507 0.213 265.7);
+  --primary-foreground: oklch(0.985 0 0);
+  --primary-soft: oklch(0.955 0.036 266.4);
+  --accent: oklch(0.914 0.028 265.3);
+  --accent-foreground: oklch(0.3 0.12 267.4);
+  --ring: oklch(0.62 0.18 265.5);
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: oklch(0.151 0.006 280.6);
+  --foreground: oklch(0.962 0.003 264.5);
+  --card: oklch(0.185 0.008 281.3);
+  --card-foreground: oklch(0.962 0.003 264.5);
+  --muted: oklch(0.24 0.008 281.2);
+  --muted-foreground: oklch(0.7 0.02 264.6);
+  --border: oklch(0.272 0.009 281.1);
+  --primary: oklch(0.688 0.179 264.4);
+  --primary-foreground: oklch(0.151 0.006 280.6);
+  --primary-soft: oklch(0.24 0.07 264.7);
+  --accent: oklch(0.26 0.06 266.4);
+  --accent-foreground: oklch(0.91 0.035 265.5);
+  --ring: oklch(0.62 0.18 265.5);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-ring: var(--ring);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-rise {
+    animation: hero-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-rise {
+    animation: none;
+  }
+}
+
+.divider-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 9999px;
+  background: var(--muted-foreground);
+}
+
+.container-page {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .container-page {
+    padding-inline: 1.5rem;
+  }
+}

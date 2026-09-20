@@ -1,0 +1,15 @@
+{
+  "heading": "Education",
+  "entries": [
+    {
+      "id": "bca",
+      "degree": "Bachelor of Computer Applications",
+      "field": "Artificial Intelligence and Data Science",
+      "institution": "Dr. M.G.R Educational and Research Institute",
+      "location": "",
+      "startDate": "2021",
+      "endDate": "2024",
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "heading": "Projects",
+  "subheading": "Selected work across enterprise and e-commerce applications",
+  "projects": [
+    {
+      "id": "mukizh-inventory-billing",
+      "slug": "mukizh-apparel-inventory-billing",
+      "name": "Mukizh – Apparel Inventory & Billing Web Application",
+      "shortDescription": "Apparel inventory and billing web application covering stock management and billing workflows.",
+      "description": "Mukizh is an apparel-focused inventory and billing web application. It streamlines stock management and billing workflows for an apparel business. The project covers full-stack implementation from inventory tracking to bill generation.",
+      "company": "Revolite Infotech Pvt. Ltd.",
+      "role": "Full Stack Developer",
+      "technologies": ["React.js", "Node.js", "Express.js", "TypeScript", "PostgreSQL"],
+      "responsibilities": [
+        "Implemented full-stack inventory and billing workflows",
+        "Built responsive UI with React.js and TypeScript",
+        "Designed REST API endpoints for inventory and billing operations"
+      ],
+      "architecture": "",
+      "achievements": [],
+      "problem": "",
+      "solution": "",
+      "image": "",
+      "githubUrl": "",
+      "liveUrl": "",
+      "featured": true,
+      "displayOrder": 1
+    },
+    {
+      "id": "mukizh-ecommerce",
+      "slug": "mukizh-fashion-ecommerce",
+      "name": "Mukizh Fashion E-Commerce Platform",
+      "shortDescription": "E-commerce platform for apparel retail covering catalogue, cart, and order flows.",
+      "description": "Mukizh Fashion is an e-commerce platform for apparel retail. It covers product catalogue, shopping cart, and order workflows, built as a scalable e-commerce web application with modern full-stack technologies.",
+      "company": "Revolite Infotech Pvt. Ltd.",
+      "role": "Full Stack Developer",
+      "technologies": ["React.js", "Next.js", "Node.js", "Express.js", "TypeScript", "Redux", "PostgreSQL"],
+      "responsibilities": [
+        "Built e-commerce storefront flows with React.js/Next.js",
+        "Implemented state management with Redux",
+        "Designed backend APIs and data models for catalogue, cart, and orders"
+      ],
+      "architecture": "",
+      "achievements": [],
+      "problem": "",
+      "solution": "",
+      "image": "",
+      "githubUrl": "",
+      "liveUrl": "",
+      "featured": true,
+      "displayOrder": 2
+    },
+    {
+      "id": "elitehire360",
+      "slug": "elitehire360-recruitment",
+      "name": "EliteHire360 – Recruitment Management System",
+      "shortDescription": "Recruitment management system handling the hiring workflow end to end.",
+      "description": "EliteHire360 is a recruitment management system that handles the hiring workflow end to end — from job posting through candidate pipeline management. Built as an enterprise web application with secure authentication and role-based access.",
+      "company": "Traiso Academy Pvt. Ltd.",
+      "role": "Full Stack Developer",
+      "technologies": ["React.js", "Node.js", "Express.js", "TypeScript", "REST APIs", "PostgreSQL"],
+      "responsibilities": [
+        "Built recruitment workflow components across the full stack",
+        "Implemented secure authentication and role-based access",
+        "Optimized API performance for candidate management flows"
+      ],
+      "architecture": "",
+      "achievements": [],
+      "problem": "",
+      "solution": "",
+      "image": "",
+      "githubUrl": "",
+      "liveUrl": "",
+      "featured": false,
+      "displayOrder": 3
+    },
+    {
+      "id": "fridex",
+      "slug": "fridex-fraud-identification",
+      "name": "Fraud Identification Executive (FRIDEX)",
+      "shortDescription": "Fraud identification tool surfaced through an enterprise data platform.",
+      "description": "FRIDEX (Fraud Identification Executive) is a fraud identification tool. Built as part of an enterprise web platform, it surfaces fraud indicators to decision makers through secure, role-based interfaces.",
+      "company": "Traiso Academy Pvt. Ltd.",
+      "role": "Full Stack Developer",
+      "technologies": ["React.js", "Node.js", "Express.js", "TypeScript", "GraphQL", "AWS AppSync", "PostgreSQL"],
+      "responsibilities": [
+        "Built fraud identification interfaces on the frontend",
+        "Integrated GraphQL data access via AWS AppSync",
+        "Contributed to secure authentication and authorization flows"
+      ],
+      "architecture": "",
+      "achievements": [],
+      "problem": "",
+      "solution": "",
+      "image": "",
+      "githubUrl": "",
+      "liveUrl": "",
+      "featured": false,
+      "displayOrder": 4
+    }
+  ]
+}

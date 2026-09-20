@@ -1,0 +1,8 @@
+{
+  "statistics": [
+    { "id": "years", "value": "2+", "label": "Years Experience" },
+    { "id": "projects", "value": "5+", "label": "Projects" },
+    { "id": "releases", "value": "10+", "label": "Production Releases" },
+    { "id": "mentored", "value": "25+", "label": "Developers/Interns Mentored" }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "heading": "Skills",
+  "categories": [
+    {
+      "id": "frontend",
+      "name": "Frontend",
+      "skills": [
+        "React.js",
+        "Next.js",
+        "JavaScript (ES6+)",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "Redux",
+        "Redux-Saga",
+        "Ant Design",
+        "Bootstrap",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "id": "backend",
+      "name": "Backend",
+      "skills": [
+        "Node.js",
+        "Express.js",
+        "ASP.NET Core",
+        "REST APIs",
+        "GraphQL",
+        "AWS AppSync"
+      ]
+    },
+    {
+      "id": "database",
+      "name": "Database",
+      "skills": [
+        "PostgreSQL",
+        "MySQL",
+        "TypeORM",
+        "Entity Framework Core"
+      ]
+    },
+    {
+      "id": "cloud",
+      "name": "Cloud & DevOps",
+      "skills": [
+        "AWS S3",
+        "Docker",
+        "Jenkins",
+        "Git",
+        "GitHub",
+        "AWS CodeCommit",
+        "CI/CD Pipelines"
+      ]
+    },
+    {
+      "id": "architecture",
+      "name": "Architecture",
+      "skills": [
+        "Micro Frontends",
+        "Monorepo Architecture",
+        "Agile Scrum",
+        "Sprint Planning",
+        "Code Reviews",
+        "Release Management"
+      ]
+    }
+  ]
+}

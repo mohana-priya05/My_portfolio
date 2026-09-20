@@ -1,0 +1,83 @@
+{
+  "heading": "Experience",
+  "entries": [
+    {
+      "id": "revolite-infotech",
+      "company": "Revolite Infotech Pvt. Ltd.",
+      "role": "Full Stack Developer",
+      "logo": "/officeImg/image.png",
+      "location": "Chennai",
+      "startDate": "Jan 2026",
+      "endDate": "",
+      "current": true,
+      "displayOrder": 1,
+      "summary": "Developing, architecting, and supporting enterprise and e-commerce web applications across the full stack — from frontend and backend to APIs, authentication, deployment, and production support.",
+      "highlights": [
+        "10+ UAT & Production Releases",
+        "15+ High-Priority Production Bugs Resolved",
+        "10+ Reusable UI Components",
+        "JWT & RBAC Security",
+        "CI/CD & Deployment"
+      ],
+      "responsibilities": [
+        "Developed and maintained enterprise and e-commerce applications using React.js, Next.js, Node.js, Express.js, TypeScript, GraphQL, PostgreSQL, and AWS, covering inventory, billing, product, cart, and payment workflows.",
+        "Built reusable and scalable UI components with React.js and Redux-Saga, and integrated AWS AppSync GraphQL APIs for efficient data communication and state synchronization.",
+        "Developed backend APIs and implemented JWT authentication and fine-grained RBAC for secure multi-tenant authorization, along with integrations for Razorpay, AWS S3, Nodemailer, and SMS OTP.",
+        "Resolved 15+ high-priority production issues, performing root-cause analysis, implementing fixes, and validating solutions across UAT and production environments.",
+        "Managed and supported 10+ UAT and production releases using Jenkins, AWS CodeCommit, and Docker, collaborating with development and QA teams throughout release and post-production support."
+      ],
+      "technologies": [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "Express.js",
+        "GraphQL",
+        "AWS AppSync",
+        "PostgreSQL",
+        "TypeORM",
+        "Redux-Saga",
+        "Razorpay",
+        "AWS S3",
+        "Docker",
+        "Jenkins",
+        "AWS CodeCommit",
+        "JWT",
+        "RBAC",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "id": "traiso-academy",
+      "company": "Traiso Academy Pvt. Ltd.",
+      "role": "Full Stack Developer & Trainer",
+      "logo": "/office2img/image.png",
+      "location": "Chennai",
+      "startDate": "Sep 2024",
+      "endDate": "Dec 2025",
+      "current": false,
+      "displayOrder": 2,
+      "summary": "Built full-stack enterprise applications and reusable frontend architectures, while training and mentoring junior developers and interns.",
+      "responsibilities": [
+        "Developed full-stack enterprise applications using React.js, TypeScript, ASP.NET Core, PostgreSQL, and Java REST APIs, contributing across frontend, backend, and business workflows.",
+        "Developed reusable Micro Frontend modules using React.js and TypeScript within a Monorepo architecture, improving modularity and maintainability across application portals.",
+        "Designed and implemented ASP.NET Core microservices with Entity Framework Core and PostgreSQL, and integrated gRPC and REST APIs for distributed application communication.",
+        "Developed role-based interfaces and workflows, while contributing to debugging, data validation, issue analysis, and application enhancements across recruitment and healthcare applications.",
+        "Mentored 10+ junior developers and 15+ interns in JavaScript, React.js, and backend development, supporting them in application architecture, debugging, coding practices, and project implementation."
+      ],
+      "technologies": [
+        "React.js",
+        "TypeScript",
+        "Micro Frontends",
+        "Monorepo",
+        "ASP.NET Core",
+        "Entity Framework Core",
+        "PostgreSQL",
+        "gRPC",
+        "Java",
+        "REST APIs",
+        "RBAC"
+      ]
+    }
+  ]
+}

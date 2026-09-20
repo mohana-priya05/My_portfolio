@@ -1,0 +1,18 @@
+{
+  "name": "Mohana Priya",
+  "shortName": "MOHANA PRIYA",
+  "title": "Full Stack Developer",
+  "email": "mohanabharani480@gmail.com",
+  "location": "Chennai, Tamil Nadu",
+  "linkedin": "https://www.linkedin.com/in/b-mohana-priya-672122289/",
+  "github": "",
+  "experienceYears": "2+",
+  "summary": "Full Stack Developer with 2+ years of experience building scalable enterprise and e-commerce web applications using React.js, Next.js, Node.js, Express.js, TypeScript, PostgreSQL, and AWS. Skilled in designing microservices and micro-frontend architectures, crafting secure authentication pipelines, and optimizing API performance. Demonstrated success in managing full-stack project lifecycles from architecture design to production release.",
+  "highlights": [
+    "Scalable enterprise and e-commerce web applications",
+    "Microservices and micro-frontend architectures",
+    "Secure authentication pipelines",
+    "API performance optimization",
+    "Full-stack lifecycle from architecture to production release"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "heading": "Training & Mentorship",
+  "summary": "Actively mentoring junior developers and interns in modern full-stack web development.",
+  "counts": {
+    "juniorDevelopers": 10,
+    "interns": 15
+  },
+  "labels": {
+    "juniorDevelopers": "Junior Developers Mentored",
+    "interns": "Interns Mentored"
+  },
+  "technologies": ["JavaScript", "React.js", "Backend Web Development"]
+}
