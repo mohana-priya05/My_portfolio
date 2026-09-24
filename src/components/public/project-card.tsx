@@ -4,15 +4,6 @@ import { ArrowRight, Star } from "lucide-react";
 import { GithubIcon } from "@/components/brand-icons";
 import type { Project } from "@/types/content";
 
-function initials(name: string): string {
-  return name
-    .split(/\s+/)
-    .filter((word) => /[A-Za-z0-9]/.test(word))
-    .slice(0, 2)
-    .map((word) => word[0].toUpperCase())
-    .join("");
-}
-
 export function ProjectCard({ project }: { project: Project }) {
   const hasImage = Boolean(project.image);
   const showGithub = Boolean(project.githubUrl);
@@ -30,7 +21,7 @@ export function ProjectCard({ project }: { project: Project }) {
             className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
           />
         ) : (
-          <div className="deep-gradient relative flex h-full w-full flex-col justify-between p-6">
+          <div className="deep-gradient relative flex h-full w-full flex-col p-6">
             <div className="bg-dots-light absolute inset-0" aria-hidden="true" />
             <div className="relative flex items-start justify-between gap-3">
               <span className="rounded-full bg-white/15 px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-white/90 backdrop-blur">
@@ -43,11 +34,8 @@ export function ProjectCard({ project }: { project: Project }) {
                 </span>
               ) : null}
             </div>
-            <div className="relative" style={{bottom:"3rem"}}>
-              <p className="font-mono text-4xl font-black tracking-tight text-white/25 md:text-5xl">
-                {initials(project.name)}
-              </p>
-              <h3 className="mt-2 text-xl font-bold leading-snug text-white md:text-2xl">
+            <div className="relative flex flex-1 items-center">
+              <h3 className="text-xl font-bold leading-snug text-white md:text-2xl">
                 {project.name}
               </h3>
             </div>
