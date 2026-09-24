@@ -95,7 +95,7 @@ export default async function HomePage() {
         profile={{ name: profile.name, location: profile.location, email: profile.email }}
       />
 
-      <SkillsSection heading={skills.heading} categories={skills.categories} aiTools={aiTools} />
+      <SkillsSection heading={skills.heading} categories={skills.categories} />
 
       <ExperienceSection heading={experience.heading} entries={experience.entries} />
 

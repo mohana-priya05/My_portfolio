@@ -20,14 +20,18 @@ export function ProjectsSection({ heading, subheading, projects }: ProjectsSecti
       aria-labelledby="projects-heading"
       className="projects-backdrop relative scroll-mt-24 overflow-hidden"
     >
-      <div className="bg-dots absolute inset-0 opacity-60 [mask-image:radial-gradient(60rem_28rem_at_50%_20%,black,transparent)]" aria-hidden="true" />
       <div className="container-page relative py-16 md:py-24">
-        <SectionHeading eyebrow="Work" title={heading} description={subheading} id="projects-heading" />
+        <SectionHeading
+          eyebrow="Work"
+          title={heading}
+          description={subheading}
+          id="projects-heading"
+        />
 
         <div className="grid gap-6 md:grid-cols-2">
           {sorted.map((project, index) => (
             <Reveal key={project.id} delay={(index % 2) * 90} className="h-full">
-              <ProjectCard project={project} />
+              <ProjectCard project={project} index={index} />
             </Reveal>
           ))}
         </div>

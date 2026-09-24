@@ -1,23 +1,34 @@
 {
   "heading": "Projects",
-  "subheading": "Selected work across enterprise and e-commerce applications",
+  "subheading": "Selected work across enterprise, e-commerce, recruitment, and healthcare applications",
   "projects": [
     {
       "id": "mukizh-inventory-billing",
       "slug": "mukizh-apparel-inventory-billing",
       "name": "Mukizh – Apparel Inventory & Billing Web Application",
-      "shortDescription": "Apparel inventory and billing web application for managing stock, products, sales, billing, and related business workflows.",
-      "description": "Mukizh is an apparel-focused inventory and billing web application. It streamlines stock management and billing workflows for an apparel business. The project covers full-stack implementation from inventory tracking to bill generation.",
+      "shortDescription": "Enterprise apparel inventory and billing application for managing products, stock, sales, billing, and day-to-day business operations.",
+      "description": "Mukizh is an apparel-focused inventory and billing web application developed to streamline business operations. The platform manages product information, inventory and stock tracking, billing, sales, and related business workflows through a centralized application.",
       "company": "Revolite Infotech Pvt. Ltd.",
       "role": "Full Stack Developer",
-      "technologies": ["React.js", "Node.js", "Express.js", "TypeScript","GraphQL", "MySQL"],
+      "technologies": [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "TypeScript",
+        "GraphQL",
+        "MySQL"
+      ],
       "responsibilities": [
-        "Implemented full-stack inventory and billing workflows",
-        "Built responsive UI with React.js and TypeScript",
-        "Designed REST API endpoints for inventory and billing operations"
+        "Developed full-stack inventory and billing workflows covering product management, stock tracking, sales, billing, and related business operations.",
+        "Built responsive and reusable interfaces for inventory, product, billing, and sales modules with a focus on usability and maintainability.",
+        "Developed and integrated backend APIs and GraphQL services to support inventory, product, billing, and transaction workflows.",
+        "Implemented business rules, validation, authentication, and role-based access to support secure and reliable application operations.",
+        "Resolved application issues and contributed to UAT and production releases throughout the project lifecycle."
       ],
       "architecture": "",
-      "achievements": [],
+      "achievements": [
+        "Reduced manual billing effort by approximately 25% through streamlined billing workflows."
+      ],
       "problem": "",
       "solution": "",
       "image": "",
@@ -30,18 +41,33 @@
       "id": "mukizh-ecommerce",
       "slug": "mukizh-fashion-ecommerce",
       "name": "Mukizh Fashion E-Commerce Platform",
-      "shortDescription": "Full-featured fashion e-commerce platform covering product catalog, customer shopping, cart and order management, payments, and purchase workflow",
-      "description": "Mukizh Fashion is an e-commerce platform for apparel retail. It covers product catalogue, shopping cart, and order workflows, built as a scalable e-commerce web application with modern full-stack technologies.",
+      "shortDescription": "Full-stack apparel e-commerce platform with customer shopping and admin management for products, variants, customers, orders, payments, and transactions.",
+      "description": "Mukizh Fashion is a full-stack apparel e-commerce platform supporting both customer-facing shopping workflows and administrative operations. The platform enables customers to browse products, manage carts, place orders, and complete payments, while the admin system manages products, variants, inventory, customers, orders, payments, and transaction information.",
       "company": "Revolite Infotech Pvt. Ltd.",
       "role": "Full Stack Developer",
-      "technologies": ["React.js", "Next.js", "Node.js", "Express.js", "TypeScript", "GraphQL","PostgreSQL"],
+      "technologies": [
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "TypeScript",
+        "PostgreSQL",
+        "TypeORM",
+        "GraphQL",
+        "Razorpay",
+        "AWS S3"
+      ],
       "responsibilities": [
-        "Built e-commerce storefront flows with React.js/Next.js",
-        "Implemented state management with Redux",
-        "Designed backend APIs and data models for catalogue, cart, and orders"
+        "Developed customer-facing e-commerce workflows covering product browsing, product details, cart management, checkout, orders, and customer interactions.",
+        "Built admin management workflows for product creation, editing, deletion, product variants, stock management, customers, orders, payments, and transaction details.",
+        "Developed backend APIs and data models supporting product catalogue, variants, inventory, customers, cart, orders, payments, and transaction workflows.",
+        "Integrated payment processing and supporting services for secure transactions, customer notifications, OTP verification, and product media management.",
+        "Implemented business validations, authentication, authorization, and workflow rules to maintain secure and consistent operations across customer and admin modules."
       ],
       "architecture": "",
-      "achievements": [],
+      "achievements": [
+        "Improved operational efficiency by approximately 25% through streamlined customer engagement, inventory, sales, profit tracking, and secure payment workflows."
+      ],
       "problem": "",
       "solution": "",
       "image": "",
@@ -54,18 +80,33 @@
       "id": "elitehire360",
       "slug": "elitehire360-recruitment",
       "name": "EliteHire360 – Recruitment Management System",
-      "shortDescription": "Recruitment management system handling the hiring workflow end to end.",
-      "description": "EliteHire360 is a recruitment management system that handles the hiring workflow end to end — from job posting through candidate pipeline management. Built as an enterprise web application with secure authentication and role-based access.",
+      "shortDescription": "Enterprise recruitment management system supporting job, candidate, recruiter, and application workflows throughout the hiring lifecycle.",
+      "description": "EliteHire360 is an enterprise recruitment management system designed to manage the hiring lifecycle from job creation and candidate sourcing to application tracking and recruitment workflows. The platform provides secure, role-based access for different users involved in the recruitment process.",
       "company": "Traiso Academy Pvt. Ltd.",
       "role": "Full Stack Developer",
-      "technologies": ["React.js","TypeScript","ASP.NET Core", "C#", "Entity Framework Core", "PostgreSQL"],
-      "responsibilities": [
-        "Built recruitment workflow components across the full stack",
-        "Implemented secure authentication and role-based access",
-        "Optimized API performance for candidate management flows"
+      "technologies": [
+        "React.js",
+        "TypeScript",
+        "ASP.NET Core",
+        "C#",
+        "Entity Framework Core",
+        "PostgreSQL",
+        "Micro Frontends",
+        "Monorepo",
+        "gRPC",
+        "REST APIs"
       ],
-      "architecture": "",
-      "achievements": [],
+      "responsibilities": [
+        "Developed full-stack recruitment workflows covering job management, candidate management, applications, recruiter activities, and hiring processes.",
+        "Built reusable and modular frontend components for candidate and recruiter portals within a scalable application architecture.",
+        "Developed backend services and APIs for candidate, job, and application management with structured business workflows.",
+        "Implemented authentication, role-based access, validation, and workflow controls to support secure access across different user roles.",
+        "Integrated distributed backend services and contributed to debugging, performance improvements, and application enhancements."
+      ],
+      "architecture": "Micro Frontend and Monorepo architecture with distributed backend services.",
+      "achievements": [
+        "Reduced manual candidate sourcing and shortlisting effort by approximately 15% through integrated recruitment workflows."
+      ],
       "problem": "",
       "solution": "",
       "image": "",
@@ -78,15 +119,27 @@
       "id": "fridex",
       "slug": "fridex-fraud-identification",
       "name": "Fraud Identification Executive (FRIDEX)",
-      "shortDescription": "Fraud identification tool surfaced through an enterprise data platform.",
-      "description": "FRIDEX (Fraud Identification Executive) is a fraud identification tool. Built as part of an enterprise web platform, it surfaces fraud indicators to decision makers through secure, role-based interfaces.",
+      "shortDescription": "Enterprise healthcare fraud identification and claim review application supporting secure data analysis and audit workflows.",
+      "description": "FRIDEX (Fraud Identification Executive) is an enterprise healthcare fraud identification and claim review application. It supports users in reviewing beneficiary and healthcare claim information, identifying potential fraud indicators, and managing audit workflows through secure, role-based interfaces.",
       "company": "Traiso Academy Pvt. Ltd.",
       "role": "Full Stack Developer",
-      "technologies": ["React.js", "TypeScript", "Java","Spring Boot", "PostgreSQL"],
+      "technologies": [
+        "React.js",
+        "TypeScript",
+        "JavaScript",
+        "Tailwind CSS",
+        "Ant Design",
+        "REST APIs",
+        "Java",
+        "Spring Boot",
+        "PostgreSQL"
+      ],
       "responsibilities": [
-        "Built fraud identification interfaces on the frontend",
-        "Integrated GraphQL data access via AWS AppSync",
-        "Contributed to secure authentication and authorization flows"
+        "Developed responsive frontend interfaces for healthcare claim review, fraud identification, and audit workflows.",
+        "Built reusable UI components and frontend modules for different user roles and business workflows.",
+        "Integrated frontend screens with backend REST APIs to retrieve and display application data.",
+        "Implemented form validation, data handling, filtering, and user interactions across application modules.",
+        "Resolved frontend issues and contributed to UI enhancements, debugging, and usability improvements."
       ],
       "architecture": "",
       "achievements": [],

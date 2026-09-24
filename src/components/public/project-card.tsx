@@ -1,87 +1,130 @@
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight, Building2, Folder, HeartPulse, ShoppingCart, Users } from "lucide-react";
 import { GithubIcon } from "@/components/brand-icons";
+import type { LucideIcon } from "lucide-react";
 import type { Project } from "@/types/content";
 
-export function ProjectCard({ project }: { project: Project }) {
-  const hasImage = Boolean(project.image);
+interface CategoryStyle {
+  label: string;
+  icon: LucideIcon;
+  accentText: string;
+  accentBorder: string;
+  accentBg: string;
+}
+
+const CATEGORIES: Record<string, CategoryStyle> = {
+  "mukizh-apparel-inventory-billing": {
+    label: "Enterprise",
+    icon: Building2,
+    accentText: "text-blue-600 dark:text-blue-400",
+    accentBorder: "border-blue-500/25 dark:border-blue-400/30",
+    accentBg: "bg-blue-500/10 dark:bg-blue-400/10",
+  },
+  "mukizh-fashion-ecommerce": {
+    label: "E-Commerce",
+    icon: ShoppingCart,
+    accentText: "text-indigo-600 dark:text-indigo-400",
+    accentBorder: "border-indigo-500/25 dark:border-indigo-400/30",
+    accentBg: "bg-indigo-500/10 dark:bg-indigo-400/10",
+  },
+  "elitehire360-recruitment": {
+    label: "Recruitment",
+    icon: Users,
+    accentText: "text-teal-600 dark:text-teal-400",
+    accentBorder: "border-teal-500/25 dark:border-teal-400/30",
+    accentBg: "bg-teal-500/10 dark:bg-teal-400/10",
+  },
+  "fridex-fraud-identification": {
+    label: "Healthcare",
+    icon: HeartPulse,
+    accentText: "text-rose-600 dark:text-rose-400",
+    accentBorder: "border-rose-500/25 dark:border-rose-400/30",
+    accentBg: "bg-rose-500/10 dark:bg-rose-400/10",
+  },
+};
+
+const FALLBACK: CategoryStyle = {
+  label: "Project",
+  icon: Folder,
+  accentText: "text-muted-foreground",
+  accentBorder: "border-border",
+  accentBg: "bg-muted/60",
+};
+
+export function ProjectCard({ project, index }: { project: Project; index: number }) {
+  const category = CATEGORIES[project.slug] ?? FALLBACK;
+  const CategoryIcon = category.icon;
   const showGithub = Boolean(project.githubUrl);
   const showLive = Boolean(project.liveUrl);
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
-      <div className="relative aspect-[16/9] overflow-hidden">
-        {hasImage ? (
-          <Image
-            src={project.image!}
-            alt={project.name}
-            fill
-            sizes="(min-width: 1024px) 448px, (min-width: 640px) 100vw, 100vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-          />
-        ) : (
-          <div className="deep-gradient relative flex h-full w-full flex-col p-6">
-            <div className="bg-dots-light absolute inset-0" aria-hidden="true" />
-            <div className="relative flex items-start justify-between gap-3">
-              <span className="rounded-full bg-white/15 px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-white/90 backdrop-blur">
-                {project.role || "Project"}
-              </span>
-              {project.featured ? (
-                <span className="inline-flex items-center gap-1 rounded-full bg-white/15 px-2.5 py-1 text-[11px] font-medium text-white backdrop-blur">
-                  <Star className="h-3 w-3" aria-hidden="true" />
-                  Featured
-                </span>
-              ) : null}
-            </div>
-            <div className="relative flex flex-1 items-center">
-              <h3 className="text-xl font-bold leading-snug text-white md:text-2xl">
-                {project.name}
-              </h3>
-            </div>
-          </div>
-        )}
+    <article
+      className={
+        "group flex h-full flex-col rounded-2xl border border-border/80 bg-card p-6 shadow-soft card-soft transition-all duration-300 hover:-translate-y-1 hover:border-primary/35 hover:shadow-lift md:p-7"
+      }
+    >
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <p className="font-mono text-xs font-semibold tracking-[0.18em] text-muted-foreground/70">
+            {String(index + 1).padStart(2, "0")}
+          </p>
+          <span
+            className={
+              "mt-3 inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide " +
+              category.accentBorder +
+              " " +
+              category.accentBg +
+              " " +
+              category.accentText
+            }
+          >
+            {category.label}
+          </span>
+        </div>
+        <CategoryIcon
+          className={"h-5 w-5 shrink-0 " + category.accentText}
+          strokeWidth={1.75}
+          aria-hidden="true"
+        />
       </div>
 
-      <div className="flex flex-1 flex-col p-6">
-        {project.company ? (
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-            {project.company}
-          </p>
-        ) : null}
-        <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground md:text-[15px]">
-          {project.shortDescription}
-        </p>
+      <h3 className="mt-5 text-lg font-bold leading-snug tracking-tight text-foreground md:text-xl">
+        {project.name}
+      </h3>
 
-        {project.technologies.length > 0 ? (
-          <ul className="mt-4 flex flex-wrap gap-1.5">
-            {project.technologies.slice(0, 6).map((tech) => (
-              <li
-                key={tech}
-                className="rounded-full border border-border/80 bg-section-alt px-2.5 py-1 font-mono text-[11px] text-muted-foreground"
-              >
-                {tech}
-              </li>
-            ))}
-            {project.technologies.length > 6 ? (
-              <li className="rounded-full border border-border/80 bg-section-alt px-2.5 py-1 font-mono text-[11px] text-muted-foreground">
-                +{project.technologies.length - 6}
-              </li>
-            ) : null}
-          </ul>
-        ) : null}
+      {project.company ? (
+        <p className="mt-2 text-xs font-medium text-muted-foreground/80">{project.company}</p>
+      ) : null}
 
-        <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-border pt-5">
-          <Link
-            href={"/projects/" + project.slug}
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-indigo-600"
-          >
-            View Project
-            <ArrowRight
-              className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
-              aria-hidden="true"
-            />
-          </Link>
+      <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+        {project.shortDescription}
+      </p>
+
+      {project.technologies.length > 0 ? (
+        <ul className="mt-5 flex flex-wrap gap-1.5">
+          {project.technologies.slice(0, 5).map((tech) => (
+            <li
+              key={tech}
+              className="rounded-full border border-border/80 bg-muted/60 px-2.5 py-1 font-mono text-[11px] text-muted-foreground"
+            >
+              {tech}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+
+      <div className="mt-6 flex items-center justify-between border-t border-border/70 pt-4">
+        <Link
+          href={"/projects/" + project.slug}
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary"
+        >
+          View Project
+          <ArrowRight
+            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+            aria-hidden="true"
+          />
+        </Link>
+        {showGithub || showLive ? (
           <div className="flex items-center gap-2">
             {showGithub ? (
               <a
@@ -89,7 +132,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={"GitHub repository for " + project.name}
-                className="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground transition-all hover:-translate-y-px hover:border-primary/40 hover:text-foreground"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
               >
                 <GithubIcon className="h-3.5 w-3.5" aria-hidden="true" />
                 Code
@@ -101,13 +144,13 @@ export function ProjectCard({ project }: { project: Project }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={"Live demo for " + project.name}
-                className="rounded-lg bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground transition-all hover:-translate-y-px hover:bg-primary/90"
+                className="rounded-lg bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 Live demo
               </a>
             ) : null}
           </div>
-        </div>
+        ) : null}
       </div>
     </article>
   );
