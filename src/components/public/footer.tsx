@@ -15,11 +15,13 @@ export function Footer({ name, title, email, linkedin, github }: FooterProps) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-auto border-t border-border bg-card/40">
-      <div className="container-page py-10">
+    <footer className="mt-auto border-t border-border/70 bg-section">
+      <div className="container-page py-12">
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div>
-            <p className="font-mono text-sm font-bold tracking-[0.18em]">{name}</p>
+            <p className="font-mono text-sm font-bold tracking-[0.18em] text-foreground">
+              {name}
+            </p>
             <p className="mt-1 text-sm text-muted-foreground">{title}</p>
           </div>
 
@@ -28,7 +30,7 @@ export function Footer({ name, title, email, linkedin, github }: FooterProps) {
               <Link
                 key={link.section}
                 href={link.href}
-                className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm text-muted-foreground transition-colors hover:text-primary"
               >
                 {link.label}
               </Link>
@@ -41,7 +43,7 @@ export function Footer({ name, title, email, linkedin, github }: FooterProps) {
                 <a
                   href={"mailto:" + email}
                   aria-label={"Email " + email}
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-card text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-card text-muted-foreground shadow-soft transition-all hover:-translate-y-px hover:border-primary/40 hover:text-primary"
                 >
                   <Mail className="h-4 w-4" aria-hidden="true" />
                 </a>
@@ -53,8 +55,8 @@ export function Footer({ name, title, email, linkedin, github }: FooterProps) {
                   href={linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn profile"
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-card text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+                  aria-label="Mohana Priya on LinkedIn"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-card text-muted-foreground shadow-soft transition-all hover:-translate-y-px hover:border-primary/40 hover:text-primary"
                 >
                   <LinkedinIcon className="h-4 w-4" aria-hidden="true" />
                 </a>
@@ -67,7 +69,7 @@ export function Footer({ name, title, email, linkedin, github }: FooterProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub profile"
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-card text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-card text-muted-foreground shadow-soft transition-all hover:-translate-y-px hover:border-primary/40 hover:text-primary"
                 >
                   <GithubIcon className="h-4 w-4" aria-hidden="true" />
                 </a>
@@ -76,12 +78,12 @@ export function Footer({ name, title, email, linkedin, github }: FooterProps) {
           </ul>
         </div>
 
-        <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
+        <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border/70 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
           <p>
             © {year} {name}. All rights reserved.
           </p>
           <p className="flex items-center gap-1.5">
-            <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
+            <MapPin className="h-3.5 w-3.5 text-primary/60" aria-hidden="true" />
             Chennai, Tamil Nadu
           </p>
         </div>

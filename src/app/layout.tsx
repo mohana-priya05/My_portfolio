@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { readContentFile } from "@/lib/content/read";
 import type { Settings } from "@/types/content";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -71,8 +71,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fafafa" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a0a0c" },
+    { media: "(prefers-color-scheme: light)", color: "#f7f9fc" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b1324" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -81,7 +81,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${geistMono.variable}`}>
       <body className="flex min-h-full flex-col bg-background text-foreground">
         <ThemeProvider>{children}</ThemeProvider>
       </body>

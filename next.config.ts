@@ -53,6 +53,7 @@ const nextConfig: NextConfig = {
       { pathname: "/images/**" },
       { pathname: "/officeImg/**" },
       { pathname: "/office2img/**" },
+      { pathname: "/profilePhoto/**" },
     ],
   },
 };

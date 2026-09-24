@@ -24,6 +24,7 @@ export interface Hero {
   secondaryCta: CtaLink;
   resumeCtaLabel: string;
   badge?: string;
+  photo?: string;
 }
 
 export interface About {

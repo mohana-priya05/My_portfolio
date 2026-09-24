@@ -15,13 +15,18 @@ export function ProjectsSection({ heading, subheading, projects }: ProjectsSecti
   const sorted = [...projects].sort((a, b) => (a.displayOrder ?? 0) - (b.displayOrder ?? 0));
 
   return (
-    <section id="projects" aria-labelledby="projects-heading" className="scroll-mt-24">
-      <div className="container-page py-16 md:py-20">
+    <section
+      id="projects"
+      aria-labelledby="projects-heading"
+      className="projects-backdrop relative scroll-mt-24 overflow-hidden"
+    >
+      <div className="bg-dots absolute inset-0 opacity-60 [mask-image:radial-gradient(60rem_28rem_at_50%_20%,black,transparent)]" aria-hidden="true" />
+      <div className="container-page relative py-16 md:py-24">
         <SectionHeading eyebrow="Work" title={heading} description={subheading} id="projects-heading" />
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           {sorted.map((project, index) => (
-            <Reveal key={project.id} delay={(index % 2) * 80}>
+            <Reveal key={project.id} delay={(index % 2) * 90} className="h-full">
               <ProjectCard project={project} />
             </Reveal>
           ))}

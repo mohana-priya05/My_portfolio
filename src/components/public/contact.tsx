@@ -1,5 +1,4 @@
 import { Reveal } from "./reveal";
-import { SectionHeading } from "./section-heading";
 import { Mail } from "lucide-react";
 import { LinkedinIcon } from "@/components/brand-icons";
 import type { SocialLinks } from "@/types/content";
@@ -12,62 +11,82 @@ export function ContactSection({ social }: ContactSectionProps) {
   if (!social.email && !social.linkedin) return null;
 
   return (
-    <section id="contact" aria-labelledby="contact-heading" className="scroll-mt-24">
-      <div className="container-page py-16 md:py-20">
-        <SectionHeading
-          eyebrow="Contact"
-          title="Let's Talk"
-          description="Have a project in mind or want to collaborate? Reach out."
-          id="contact-heading"
-        />
+    <section id="contact" aria-labelledby="contact-heading" className="scroll-mt-24 bg-section-alt">
+      <div className="container-page py-16 md:py-24">
+        <Reveal>
+          <div className="contact-panel relative overflow-hidden rounded-3xl px-6 py-14 shadow-lift md:px-16 md:py-20">
+            <div
+              className="blob animate-blob-slow absolute -right-16 -top-20 h-72 w-72 bg-secondary/30"
+              aria-hidden="true"
+            />
+            <div
+              className="blob animate-blob-slower absolute -bottom-24 -left-16 h-72 w-72 bg-primary/30"
+              aria-hidden="true"
+            />
+            <div className="bg-dots-light absolute inset-0 opacity-30" aria-hidden="true" />
 
-        <div className="grid gap-4 md:grid-cols-2">
-          {social.email ? (
-            <Reveal>
-              <a
-                href={"mailto:" + social.email}
-                aria-label={"Email " + social.email}
-                className="flex items-center gap-4 rounded-lg border border-border bg-card p-6 transition-colors hover:bg-accent"
+            <div className="relative mx-auto max-w-2xl text-center">
+              <p
+                id="contact-heading"
+                className="mb-3 inline-flex items-center gap-3 font-mono text-xs font-semibold uppercase tracking-[0.22em] text-white/60"
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-primary-soft text-accent-foreground">
-                  <Mail className="h-5 w-5" aria-hidden="true" />
-                </span>
-                <span>
-                  <span className="block font-mono text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                    Email
-                  </span>
-                  <span className="mt-0.5 block break-all font-medium text-foreground">
-                    {social.email}
-                  </span>
-                </span>
-              </a>
-            </Reveal>
-          ) : null}
+                <span className="h-px w-8 bg-white/40" aria-hidden="true" />
+                Contact
+                <span className="h-px w-8 bg-white/40" aria-hidden="true" />
+              </p>
+              <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+                Let&apos;s Talk
+              </h2>
+              <p className="mt-3 text-base leading-relaxed text-white/70 md:text-lg">
+                Let&rsquo;s connect and build something meaningful.
+              </p>
 
-          {social.linkedin ? (
-            <Reveal delay={100}>
-              <a
-                href={social.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn profile"
-                className="flex items-center gap-4 rounded-lg border border-border bg-card p-6 transition-colors hover:bg-accent"
-              >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-primary-soft text-accent-foreground">
-                  <LinkedinIcon className="h-5 w-5" aria-hidden="true" />
-                </span>
-                <span>
-                  <span className="block font-mono text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                    LinkedIn
-                  </span>
-                  <span className="mt-0.5 block max-w-[16rem] truncate font-medium text-foreground">
-                    {social.linkedin}
-                  </span>
-                </span>
-              </a>
-            </Reveal>
-          ) : null}
-        </div>
+              <div className="mx-auto mt-10 grid max-w-xxl gap-3 md:grid-cols-2">
+                {social.email ? (
+                  <a
+                    href={"mailto:" + social.email}
+                    aria-label={"Email " + social.email}
+                    className="flex items-center gap-4 rounded-2xl border border-white/15 bg-white/10 px-5 py-4 text-left backdrop-blur transition-colors hover:bg-white/15"
+                  >
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-white">
+                      <Mail className="h-5 w-5" aria-hidden="true" />
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block font-mono text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
+                        Email
+                      </span>
+                      <span className="mt-0.5 block whitespace-nowrap text-[13px] font-medium text-white sm:text-sm">
+                        {social.email}
+                      </span>
+                    </span>
+                  </a>
+                ) : null}
+
+                {social.linkedin ? (
+                  <a
+                    href={social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Mohana Priya on LinkedIn"
+                    className="group flex items-center gap-4 rounded-2xl border border-white/15 bg-white/10 px-5 py-4 text-left backdrop-blur transition-colors hover:bg-white/15"
+                  >
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-white">
+                      <LinkedinIcon className="h-5 w-5" aria-hidden="true" />
+                    </span>
+                    <span>
+                      <span className="block font-mono text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
+                        LinkedIn
+                      </span>
+                      <span className="mt-0.5 block text-sm font-semibold text-white transition-colors group-hover:text-white">
+                        Mohana Priya
+                      </span>
+                    </span>
+                  </a>
+                ) : null}
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

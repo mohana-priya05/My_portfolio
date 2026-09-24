@@ -8,7 +8,6 @@ import { EducationSection } from "@/components/public/education";
 import { MentorshipSection } from "@/components/public/mentorship";
 import { AiToolsSection } from "@/components/public/ai-tools";
 import { ContactSection } from "@/components/public/contact";
-import { Divider } from "@/components/public/divider";
 import {
   readContentFile,
   publicFileExists,
@@ -87,9 +86,8 @@ export default async function HomePage() {
         secondaryCta={hero.secondaryCta}
         resumeCtaLabel={hero.resumeCtaLabel}
         resumeHref={resumeExists ? settings.resume.path : undefined}
+        photo={hero.photo}
       />
-
-      <Divider />
 
       <AboutSection
         about={about}
@@ -97,15 +95,9 @@ export default async function HomePage() {
         profile={{ name: profile.name, location: profile.location, email: profile.email }}
       />
 
-      <Divider />
-
       <SkillsSection heading={skills.heading} categories={skills.categories} aiTools={aiTools} />
 
-      <Divider />
-
       <ExperienceSection heading={experience.heading} entries={experience.entries} />
-
-      <Divider />
 
       <ProjectsSection
         heading={projects.heading}
@@ -113,19 +105,11 @@ export default async function HomePage() {
         projects={projects.projects}
       />
 
-      <Divider />
-
       <EducationSection heading={education.heading} entries={education.entries} />
-
-      <Divider />
 
       <MentorshipSection mentorship={mentorship} />
 
-      <Divider />
-
       <AiToolsSection aiTools={aiTools} />
-
-      <Divider />
 
       <ContactSection social={social} />
     </>

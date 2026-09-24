@@ -1,9 +1,10 @@
 {
   "heading": "MOHANA PRIYA",
   "subtitle": "Full Stack Developer",
-  "tagline": "Building scalable enterprise and e-commerce applications with modern full-stack technologies.",
+  "tagline": "Building scalable web applications and digital solutions across enterprise, business, and e-commerce domains.",
   "primaryCta": { "label": "View Projects", "href": "#projects" },
   "secondaryCta": { "label": "Contact Me", "href": "#contact" },
   "resumeCtaLabel": "Download Resume",
-  "badge": "2+ Years Experience"
+  "badge": "2+ Years Experience",
+  "photo": "/profilePhoto/mohana_image.png"
 }

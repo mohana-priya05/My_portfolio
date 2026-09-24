@@ -17,22 +17,22 @@ export function SkillsSection({ heading, categories, aiTools }: SkillsProps) {
   const all: SkillCategory[] = [...categories, aiCategory];
 
   return (
-    <section id="skills" aria-labelledby="skills-heading" className="scroll-mt-24">
-      <div className="container-page py-16 md:py-20">
+    <section id="skills" aria-labelledby="skills-heading" className="scroll-mt-24 bg-section-alt">
+      <div className="container-page py-16 md:py-24">
         <SectionHeading eyebrow="Skills" title={heading} id="skills-heading" />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {all.map((category, index) => (
-            <Reveal key={category.id} delay={(index % 3) * 80}>
-              <div className="flex h-full flex-col rounded-lg border border-border bg-card p-5 transition-colors hover:border-primary/40">
-                <h3 className="font-mono text-sm font-semibold uppercase tracking-wider text-foreground">
+            <Reveal key={category.id} delay={(index % 3) * 80} className="h-full">
+              <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
+                <h3 className="text-sm font-bold uppercase tracking-[0.14em] text-foreground">
                   {category.name}
                 </h3>
                 <ul className="mt-4 flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
                     <li
                       key={skill}
-                      className="rounded-md bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground"
+                      className="rounded-full border border-primary/10 bg-primary-soft px-3 py-1.5 text-sm font-medium text-accent-foreground transition-colors hover:border-primary/30 hover:bg-primary-soft/70"
                     >
                       {skill}
                     </li>

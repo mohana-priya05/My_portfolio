@@ -33,6 +33,7 @@ export const heroSchema = z.object({
   secondaryCta: ctaLinkSchema,
   resumeCtaLabel: z.string().trim().min(1).max(60),
   badge: z.string().trim().max(60).optional(),
+  photo: z.string().trim().max(300).optional(),
 });
 
 export const aboutSchema = z.object({

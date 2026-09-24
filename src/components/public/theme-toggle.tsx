@@ -15,11 +15,14 @@ export function ThemeToggle() {
       type="button"
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-card text-foreground transition-colors hover:bg-accent"
+      className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-transparent text-foreground shadow-soft backdrop-blur transition-all hover:-translate-y-px hover:border-primary/40 hover:text-primary"
     >
       {mounted ? (
         isDark ? (
-          <Sun className="h-4 w-4" aria-hidden="true" />
+          <Sun
+            className="h-4 w-4 text-yellow-400 transition-colors hover:text-amber-800"
+            aria-hidden="true"
+          />
         ) : (
           <Moon className="h-4 w-4" aria-hidden="true" />
         )

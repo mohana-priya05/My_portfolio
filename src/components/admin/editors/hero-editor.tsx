@@ -25,6 +25,9 @@ export function HeroEditor({ initial }: { initial: Hero }) {
       <div className="space-y-5">
         <Card title="Text">
           <div className="grid gap-4">
+            <Field label="Profile photo" hint="Optional. Public path, e.g. /profilePhoto/image.png">
+              <Input value={form.photo ?? ""} onChange={(e) => set("photo", e.target.value)} />
+            </Field>
             <Field label="Badge" hint="Optional small label above the heading">
               <Input value={form.badge ?? ""} onChange={(e) => set("badge", e.target.value)} />
             </Field>
